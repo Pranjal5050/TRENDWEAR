@@ -2,7 +2,7 @@ import React from 'react'
 
 const Hero = () => {
     return (
-<div className="w-full bg-[#FAFAFA]">
+<div id='home' className="w-full bg-[#FAFAFA]">
   <div className="mt-2 flex flex-col lg:flex-row gap-4">
     {/* Left big image */}
     <div className="w-full lg:w-[54vw] h-[165vw] lg:h-[55vw] relative">
@@ -12,7 +12,7 @@ const Hero = () => {
         alt=""
       />
       <div className="absolute inset-0 flex flex-col justify-center px-4 ml-10">
-        <h1 className="font-bold text-4xl md:text-4xl font-[cursive]">Women's fashion</h1>
+        <h1 className="font-bold text-4xl md:text-4xl">Women's fashion</h1>
         <p className="mt-4 mb-6 font-light text-gray-500 text-sm md:text-base">
           Sitamet, consectetur adipiscing elit, sed do eiusmod tempor incidid- 
           unt labore edolore magna aliquapendisse ultrices gravida.
@@ -32,7 +32,7 @@ const Hero = () => {
           alt=""
         />
         <div className="absolute inset-0 flex flex-col  justify-center ml-4">
-          <h1 className="text-2xl md:text-2xl font-extrabold font-[cursive]">
+          <h1 className="text-2xl md:text-2xl font-extrabold">
             Men's Fashion
           </h1>
           <p className="text-gray-400 mt-1 mb-2 text-sm md:text-base">358 items</p>
@@ -49,7 +49,7 @@ const Hero = () => {
           alt=""
         />
         <div className="absolute inset-0 flex flex-col justify-center ml-5">
-          <h1 className="text-2xl md:text-2xl font-extrabold font-[cursive]">
+          <h1 className="text-2xl md:text-2xl font-extrabold">
             Kid's Fashion
           </h1>
           <p className="text-gray-400 mt-1 mb-2 text-sm md:text-base">273 items</p>
@@ -66,7 +66,7 @@ const Hero = () => {
           alt=""
         />
         <div className="absolute inset-0 flex flex-col justify-center ml-5">
-          <h1 className="text-2xl md:text-2xl font-extrabold font-[cursive]">
+          <h1 className="text-2xl md:text-2xl font-extrabold">
             Cosmetics
           </h1>
           <p className="text-gray-400 mt-1 mb-2 text-sm md:text-base">159 items</p>
@@ -83,7 +83,7 @@ const Hero = () => {
           alt=""
         />
         <div className="absolute inset-0 flex flex-col justify-center ml-5">
-          <h1 className="text-2xl md:text-2xl font-extrabold font-[cursive]">
+          <h1 className="text-2xl md:text-2xl font-extrabold">
             Accessories
           </h1>
           <p className="text-gray-400 mt-1 mb-2 text-sm md:text-base">792 items</p>

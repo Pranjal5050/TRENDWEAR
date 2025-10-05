@@ -96,7 +96,7 @@ const Products = () => {
     ]
     return (
         <div className='w-full bg-[#FAFAFA] py-5 px-10'>
-            <h1 id='men' className='text-4xl font-[cursive] mt-5 text-center'>Men's</h1><hr className='text-red-300 w-28 mt-2 m-auto mb-10' />
+            <h1 id='men' className='text-4xl font mt-5 text-center'>Men's</h1><hr className='text-red-300 w-28 mt-2 m-auto mb-10' />
 
             <div className='mt-5 flex flex-wrap gap-6 justify-center text-center'>
                 {products.map((item) => (
@@ -118,7 +118,7 @@ const Products = () => {
                 ))}
             </div>
             <div className='mt-5'>
-                <h1 id='women' className='text-4xl font-[cursive] text-center mt-10'>Women's</h1><hr className='text-red-300 w-40 mt-2 mb-10 m-auto' />
+                <h1 id='women' className='text-4xl text-center mt-10'>Women's</h1><hr className='text-red-300 w-40 mt-2 mb-10 m-auto' />
                             <div className='mt-5 flex flex-wrap gap-6 justify-center text-center'>
                 {product.map((item) => (
                     <div key={item.id} className='w-full md:w-62 rounded-lg overflow-hidden shadow-md'>

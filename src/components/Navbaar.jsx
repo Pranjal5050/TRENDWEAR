@@ -10,7 +10,7 @@ export default function Navbaar() {
     <header className="shadow-md">
       <div className="flex justify-between items-center p-6">
         {/* Logo */}
-        <h1 className="font-[cursive] font-extrabold text-2xl">TRENDWEAR</h1>
+        <h1 className="font-mono text-2xl">TRENDWEAR</h1>
 
         {/* Desktop Menu */}
         <nav className="hidden md:flex gap-6 font-mono text-lg">

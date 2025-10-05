@@ -66,10 +66,10 @@ const Slider = () => {
               : "animate-slide-right"
           }`}
         >
-          <h2 className="text-lg sm:text-xl md:text-2xl font-[cursive] text-red-600 mb-2">
+          <h2 className="text-lg sm:text-xl md:text-2xl text-red-600 mb-2">
             {slides[currentIndex].header}
           </h2>
-          <p className="text-base sm:text-lg md:text-2xl lg:text-3xl font-[cursive] text-gray-800 leading-snug mb-4">
+          <p className="text-base sm:text-lg md:text-2xl lg:text-3xl text-gray-800 leading-snug mb-4">
             {slides[currentIndex].text}
           </p>
           <a
