@@ -36,6 +36,7 @@ import TrendingProduct from './components/CustomerSupport';
 import Sale from './components/Contact';
 import Footer from './components/Footer';
 import Womens from './components/Womens';
+import ProductDetails from './components/ProductDetails';
 
 const App = () => {
   return (
@@ -62,6 +63,7 @@ const App = () => {
 
             {/* Womens page */}
             <Route path="/Womens" element={<Womens />} />
+            <Route path="/product/:id" element={<ProductDetails />} />
           </Routes>
         </div>
 
