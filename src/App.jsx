@@ -45,7 +45,7 @@ const App = () => {
         <Navbaar />
 
         {/* Main content changes based on route */}
-        <div className="flex-grow">
+        <div className="flex-grow overflow-x-hidden">
           <Routes>
             <Route
               path="/"
