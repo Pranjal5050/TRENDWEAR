@@ -1,24 +1,75 @@
-import React from 'react'
-import Navbaar from './components/Navbaar'
-import Hero from './components/Hero'
-import Products from './components/Products'
-import Slider from './components/Slider'
-import TrendingProduct from './components/CustomerSupport'
-import Sale from './components/Contact'
-import Footer from './components/Footer'
+//import React from 'react'
+//import Navbaar from './components/Navbaar'
+//import Hero from './components/Hero'
+//import Products from './components/Products'
+//import Slider from './components/Slider'
+//import TrendingProduct from './components/CustomerSupport'
+//import Sale from './components/Contact'
+//import Footer from './components/Footer'
+//import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+//
+//const App = () => {
+//  return (
+//    <div className='overflow-x-hidden'>
+//      <Navbaar/>
+//      <Hero/>
+//      <Products />
+//      <Slider/>
+//      <TrendingProduct/>
+//      <Sale/>
+//      <Footer/>
+//    </div>
+//  )
+//}
+//
+//export default App
+
+
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+
+import Navbaar from './components/Navbaar';
+import Hero from './components/Hero';
+import Products from './components/Products';
+import Slider from './components/Slider';
+import TrendingProduct from './components/CustomerSupport';
+import Sale from './components/Contact';
+import Footer from './components/Footer';
+import Womens from './components/Womens';
 
 const App = () => {
   return (
-    <div className='overflow-x-hidden'>
-      <Navbaar/>
-      <Hero/>
-      <Products />
-      <Slider/>
-      <TrendingProduct/>
-      <Sale/>
-      <Footer/>
-    </div>
-  )
-}
+    <Router>
+      <div className="flex flex-col min-h-screen">
+        {/* Navbar always visible */}
+        <Navbaar />
 
-export default App
+        {/* Main content changes based on route */}
+        <div className="flex-grow">
+          <Routes>
+            <Route
+              path="/"
+              element={
+                <>
+                  <Hero />
+                  <Products />
+                  <Slider />
+                  <TrendingProduct />
+                  <Sale />
+                </>
+              }
+            />
+
+            {/* Womens page */}
+            <Route path="/Womens" element={<Womens />} />
+          </Routes>
+        </div>
+
+        {/* Footer always visible */}
+        <Footer />
+      </div>
+    </Router>
+  );
+};
+
+export default App;

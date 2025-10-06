@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const Hero = () => {
     return (
@@ -17,7 +18,7 @@ const Hero = () => {
           Sitamet, consectetur adipiscing elit, sed do eiusmod tempor incidid- 
           unt labore edolore magna aliquapendisse ultrices gravida.
         </p>
-        <a className=" text-start">SHOP NOW</a>
+        <Link to="/Womens" className=" text-start">SHOP NOW</Link>
         <hr className="w-20 border-[#CA1515] mt-2" />
       </div>
     </div>
