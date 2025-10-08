@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 
-// Sample product data with multiple angles
+// Product data (unchanged)
 const products = [
-  {
+    {
     id: 1,
     name: "Women Embroidered Pure Cotton Straight Kurta (Blue)",
     price: 499,
-    originalPrice: 999,
+    originalPrice: 599,
     discount: 50,
     offer: "Top Discount of the Sale",
     images: [
@@ -20,8 +20,8 @@ const products = [
   {
     id: 2,
     name: "Women A-line White Maxi/Full Length Dress",
-    price: 899,
-    originalPrice: 1999,
+    price: 299,
+    originalPrice: 499,
     discount: 55,
     images: [
       "https://rukminim2.flixcart.com/image/612/612/kokdci80/t-shirt/n/p/0/s-12504484-roadster-original-imag2znyunaw7pzb.jpeg?q=70",
@@ -33,9 +33,10 @@ const products = [
   {
     id: 3,
     name: "Women A-line White Maxi/Full Length Dress",
-    price: 899,
-    originalPrice: 1999,
+    price: 399,
+    originalPrice: 499,
     discount: 55,
+    offer: "Top Discount of the Sale",
     images: [
       "https://rukminim2.flixcart.com/image/612/612/xif0q/t-shirt/o/7/f/m-men-printed-round-neck-polyester-black-and-white-t-shirt-combo-original-imahegr8hngmg6yz.jpeg?q=70",
       "https://rukminim2.flixcart.com/image/612/612/xif0q/t-shirt/w/7/a/m-men-printed-round-neck-polyester-black-and-white-t-shirt-combo-original-imahegr8fyg38tqh.jpeg?q=70",
@@ -45,9 +46,10 @@ const products = [
   {
     id: 4,
     name: "Women A-line White Maxi/Full Length Dress",
-    price: 899,
-    originalPrice: 1999,
+    price: 599,
+    originalPrice: 999,
     discount: 55,
+    offer: "Top Discount of the Sale",
     images: [
       "https://rukminim2.flixcart.com/image/612/612/xif0q/t-shirt/y/l/n/xl-ts36-vebnor-original-imahfykf8czxebrp.jpeg?q=70",
       "https://rukminim2.flixcart.com/image/612/612/xif0q/t-shirt/4/v/h/xl-ts36-vebnor-original-imahfykfztgpgpzs.jpeg?q=70",
@@ -62,7 +64,7 @@ const products = [
     id: 5,
     name: "Women A-line White Maxi/Full Length Dress",
     price: 899,
-    originalPrice: 1999,
+    originalPrice: 1299,
     discount: 55,
     images: [
       "https://rukminim2.flixcart.com/image/612/612/xif0q/t-shirt/s/o/a/m-os-100-goveirdo-b-new-veirdo-original-imahfsvheswqmtyd.jpeg?q=70",
@@ -74,9 +76,10 @@ const products = [
     {
     id: 6,
     name: "Women A-line White Maxi/Full Length Dress",
-    price: 899,
-    originalPrice: 1999,
+    price: 99,
+    originalPrice: 199,
     discount: 55,
+    offer: "Top Discount of the Sale",
     images: [
       "https://rukminim2.flixcart.com/image/612/612/xif0q/short/c/a/u/m-shorts-sti-original-imahehthmzaezrzf.jpeg?q=70",
       "https://rukminim2.flixcart.com/image/612/612/xif0q/short/q/y/t/m-shorts-sti-original-imahekysknedpafn.jpeg?q=70",
@@ -87,8 +90,8 @@ const products = [
     {
     id: 7,
     name: "Women A-line White Maxi/Full Length Dress",
-    price: 899,
-    originalPrice: 1999,
+    price: 149,
+    originalPrice: 299,
     discount: 55,
     images: [
       "https://rukminim2.flixcart.com/image/612/612/xif0q/short/t/a/2/32-kttmensshort152-kotty-original-imah39gqxycbve9n.jpeg?q=70",
@@ -100,9 +103,10 @@ const products = [
     {
     id: 8,
     name: "Women A-line White Maxi/Full Length Dress",
-    price: 899,
-    originalPrice: 1999,
+    price: 249,
+    originalPrice: 399,
     discount: 55,
+    offer: "Top Discount of the Sale",
     images: [
       "https://rukminim2.flixcart.com/image/612/612/xif0q/kurta/d/a/j/xl-ko-5006grey-jompers-original-imagrvhd2hrqj7zb.jpeg?q=70",
       "https://rukminim2.flixcart.com/image/612/612/xif0q/kurta/u/o/d/xl-ko-5006grey-jompers-original-imagrvhdp68r7ryg.jpeg?q=70",
@@ -110,7 +114,6 @@ const products = [
       "https://rukminim2.flixcart.com/image/612/612/xif0q/kurta/p/b/j/xl-ko-5006grey-jompers-original-imagrvhdj5tvhvye.jpeg?q=70", // fake
     ],
   },
-  // Add more products similarly...
 ];
 
 const ProductDetails = () => {
@@ -129,32 +132,34 @@ const ProductDetails = () => {
   }
 
   return (
-    <div className="max-w-5xl mx-auto py-10 px-4">
+    <div className="max-w-6xl mx-auto py-10 px-4 sm:px-6 lg:px-8">
+      {/* Back Button */}
       <button
         onClick={() => navigate(-1)}
-        className="mb-4 text-lg"
+        className="mb-4 flex items-center text-gray-600 hover:text-black"
       >
-        <i class="ri-arrow-left-s-line"></i><span className="text-sm">Back</span>
+        <i className="ri-arrow-left-s-line text-xl mr-1"></i>
+        <span className="text-sm">Back</span>
       </button>
 
-      <div className="grid grid-cols-1 md:grid-cols-2">
-        {/* Image section */}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        {/* Image Section */}
         <div>
           <img
             src={previewImage}
             alt={product.name}
-            className="w-92 h-[120vw] object-cover md:h-[40vw] rounded-sm"
+            className="w-full h-[130vw] sm:h-[60vw] md:h-[40vw] object-top rounded-md shadow-sm"
           />
 
           {/* Thumbnails */}
-          <div className="flex gap-2 mt-4">
+          <div className="flex flex-wrap gap-2 mt-4">
             {product.images.map((img, index) => (
               <img
                 key={index}
                 src={img}
                 alt={`Thumbnail ${index + 1}`}
                 onMouseEnter={() => setPreviewImage(img)}
-                className={`w-16 h-20 object-cover border rounded cursor-pointer ${
+                className={`w-16 h-20 object-cover border rounded-md cursor-pointer transition duration-200 ${
                   previewImage === img ? "border-indigo-500" : "border-gray-300"
                 }`}
               />
@@ -162,35 +167,42 @@ const ProductDetails = () => {
           </div>
         </div>
 
-        {/* Product details */}
+        {/* Product Details */}
         <div>
-          <h1 className="text-[13px] mt-5 md:text-2xl font-bold text-gray-800 mb-2">
+          <h1 className="text-lg sm:text-xl md:text-2xl font-semibold text-gray-800 mb-2">
             {product.name}
           </h1>
 
-          <p className="text-lg font-semibold mt-2">
+          <p className="text-xl font-semibold text-black mt-2">
             ₹{product.price}{" "}
-            <span className="line-through text-gray-500 text-base">
+            <span className="line-through text-gray-500 text-base font-normal ml-2">
               ₹{product.originalPrice}
             </span>{" "}
-            <span className="text-green-600 text-base font-semibold">
+            <span className="text-green-600 text-base font-semibold ml-2">
               {product.discount}% off
             </span>
           </p>
 
           {product.offer && (
-            <p className="mt-2 text-indigo-600 font-medium">{product.offer}</p>
+            <p className="mt-3 text-indigo-600 font-medium">{product.offer}</p>
           )}
 
-          <p className="mt-6 text-gray-600">
+          <p className="mt-6 text-gray-700 text-sm sm:text-base leading-relaxed">
             This product is crafted with precision and style. Featuring a
             contemporary design and breathable fabric, it's perfect for everyday
             wear or festive occasions.
           </p>
-          <div className="flex items-center gap-2 mt-10">
-            <button className="px-18 py-2 border-1 shadow-sm border-none hover:bg-black hover:text-white cursor-pointer"><i class="ri-shopping-cart-line"></i> Add to cart</button>
-            <button className="px-18 py-2 border-1 cursor-pointer border-none bg-[#FB641B] hover:bg-[#d04f0f] text-white"><i class="ri-shopping-bag-line"></i> Buy Now</button>
-          </div>
+
+          {/* Buttons */}
+          <div className="flex flex-col sm:flex-row sm:items-center sm:gap-4 gap-3 mt-8 w-full">
+  <button className="w-full sm:w-auto flex items-center justify-center gap-2 px-6 py-2 border border-gray-400 text-black hover:bg-black hover:text-white transition">
+    <i className="ri-shopping-cart-line"></i> Add to Cart
+  </button>
+  <button className="w-full sm:w-auto flex items-center justify-center gap-2 px-6 py-2 bg-[#FB641B] hover:bg-[#d04f0f] text-white transition">
+    <i className="ri-shopping-bag-line"></i> Buy Now
+  </button>
+</div>
+
         </div>
       </div>
     </div>

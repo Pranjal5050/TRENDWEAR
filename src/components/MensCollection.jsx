@@ -7,7 +7,7 @@ const initialProducts = [
     id: 1,
     name: "Women Embroidered Pure Cotton Straight Kurta (Blue)",
     price: 499,
-    originalPrice: 999,
+    originalPrice: 599,
     discount: 50,
     offer: "Top Discount of the Sale",
     image:
@@ -18,8 +18,8 @@ const initialProducts = [
   {
     id: 2,
     name: "Women A-line White Maxi/Full Length Dress",
-    price: 899,
-    originalPrice: 1999,
+    price: 299,
+    originalPrice: 499,
     discount: 55,
     image:
       "https://rukminim2.flixcart.com/image/612/612/kokdci80/t-shirt/n/p/0/s-12504484-roadster-original-imag2znyunaw7pzb.jpeg?q=70",
@@ -29,9 +29,10 @@ const initialProducts = [
   {
     id: 3,
     name: "Women A-line White Maxi/Full Length Dress",
-    price: 899,
-    originalPrice: 1999,
+    price: 399,
+    originalPrice: 499,
     discount: 55,
+    offer: "Top Discount of the Sale",
     image:
       "https://rukminim2.flixcart.com/image/612/612/xif0q/t-shirt/o/7/f/m-men-printed-round-neck-polyester-black-and-white-t-shirt-combo-original-imahegr8hngmg6yz.jpeg?q=70",
     hoverImage:
@@ -40,9 +41,10 @@ const initialProducts = [
   {
     id: 4,
     name: "Women A-line White Maxi/Full Length Dress",
-    price: 899,
-    originalPrice: 1999,
+    price: 599,
+    originalPrice: 999,
     discount: 55,
+    offer: "Top Discount of the Sale",
     image:
       "https://rukminim2.flixcart.com/image/612/612/xif0q/t-shirt/y/l/n/xl-ts36-vebnor-original-imahfykf8czxebrp.jpeg?q=70",
     hoverImage:
@@ -52,7 +54,7 @@ const initialProducts = [
     id: 5,
     name: "Women A-line White Maxi/Full Length Dress",
     price: 899,
-    originalPrice: 1999,
+    originalPrice: 1299,
     discount: 55,
     image:
       "https://rukminim2.flixcart.com/image/612/612/xif0q/t-shirt/s/o/a/m-os-100-goveirdo-b-new-veirdo-original-imahfsvheswqmtyd.jpeg?q=70",
@@ -62,8 +64,9 @@ const initialProducts = [
   {
     id: 6,
     name: "Women A-line White Maxi/Full Length Dress",
-    price: 899,
-    originalPrice: 1999,
+    price: 99,
+    originalPrice: 199,
+    offer: "Top Discount of the Sale",
     discount: 55,
     image:
       "https://rukminim2.flixcart.com/image/612/612/xif0q/short/c/a/u/m-shorts-sti-original-imahehthmzaezrzf.jpeg?q=70",
@@ -73,8 +76,8 @@ const initialProducts = [
   {
     id: 7,
     name: "Women A-line White Maxi/Full Length Dress",
-    price: 899,
-    originalPrice: 1999,
+    price: 149,
+    originalPrice: 299,
     discount: 55,
     image:
       "https://rukminim2.flixcart.com/image/612/612/xif0q/short/t/a/2/32-kttmensshort152-kotty-original-imah39gqxycbve9n.jpeg?q=70",
@@ -84,9 +87,10 @@ const initialProducts = [
   {
     id: 8,
     name: "Women A-line White Maxi/Full Length Dress",
-    price: 899,
-    originalPrice: 1999,
+    price: 249,
+    originalPrice: 399,
     discount: 55,
+    offer: "Top Discount of the Sale",
     image:
       "https://rukminim2.flixcart.com/image/612/612/xif0q/kurta/d/a/j/xl-ko-5006grey-jompers-original-imagrvhd2hrqj7zb.jpeg?q=70",
     hoverImage:
