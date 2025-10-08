@@ -54,7 +54,7 @@ const Hero = () => {
             Kid's Fashion
           </h1>
           <p className="text-gray-400 mt-1 mb-2 text-sm md:text-base">273 items</p>
-          <button className="font-medium text-start">Shop Now</button>
+          <Link to={'/kids'} className="font-medium text-start">Shop Now</Link>
           <hr className="w-16 border-[#CA1515] mt-1" />
         </div>
       </div>

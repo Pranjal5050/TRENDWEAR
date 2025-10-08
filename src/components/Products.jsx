@@ -10,7 +10,7 @@ const mensProducts = [
     originalPrice: 999,
     discount: 50,
     image:
-      "https://media.istockphoto.com/id/1212710606/photo/young-handsome-man-with-beard-wearing-casual-t-shirt-standing-over-white-background-looking.jpg?s=612x612&w=0&k=20&c=TqO46wTlF5ZA3lFpIfNq2br-ruuKpdZXSegCkHNoqMo=",
+      "https://rukminim2.flixcart.com/image/612/612/xif0q/t-shirt/t/b/g/-original-imahf6tc2gxegcht.jpeg?q=70",
   },
   {
     id: 2,
@@ -19,7 +19,7 @@ const mensProducts = [
     originalPrice: 1499,
     discount: 46,
     image:
-      "https://media.istockphoto.com/id/1804028024/photo/portrait-of-happy-casual-handsome-man-smiling-mid-adult-guy-isolated-on-white-background-copy.jpg?s=612x612&w=0&k=20&c=xhjQjf2iUR1yd4hs60sa798vUzX0ZdmiLFarg876Bb8=",
+      "https://rukminim2.flixcart.com/image/612/612/kokdci80/t-shirt/n/p/0/s-12504484-roadster-original-imag2znyunaw7pzb.jpeg?q=70",
   },
   {
     id: 3,
@@ -28,7 +28,7 @@ const mensProducts = [
     originalPrice: 1999,
     discount: 50,
     image:
-      "https://media.istockphoto.com/id/1142213111/photo/front-of-long-sleeve-sweatshirt-isolated-on-white-background.jpg?s=612x612&w=0&k=20&c=8YJ--Tv22JmK8tCi7Jh64wsMAMZ2eivB4cjtQo4W__c=",
+      "https://rukminim2.flixcart.com/image/612/612/xif0q/t-shirt/o/7/f/m-men-printed-round-neck-polyester-black-and-white-t-shirt-combo-original-imahegr8hngmg6yz.jpeg?q=70",
   },
   {
     id: 4,
@@ -37,7 +37,7 @@ const mensProducts = [
     originalPrice: 2499,
     discount: 48,
     image:
-      "https://media.istockphoto.com/id/539817006/photo/fashion-brown-shoes.jpg?s=612x612&w=0&k=20&c=dvH9h3k5_i3Blp6xdgZBn2AoaUQ6aNIcKm2Nd5iUSkk=",
+      "https://rukminim2.flixcart.com/image/612/612/xif0q/t-shirt/y/l/n/xl-ts36-vebnor-original-imahfykf8czxebrp.jpeg?q=70",
   },
 ];
 
@@ -93,7 +93,7 @@ const Products = () => {
 
       <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6">
         {mensProducts.map((item) => (
-          <Link to={`/product/${item.id}`} key={item.id}>
+          <Link to={`/productmen/${item.id}`} key={item.id}>
             <div className="bg-white rounded-lg overflow-hidden shadow hover:shadow-md transition duration-300">
               <img
                 className="w-full h-48 sm:h-60 md:h-72 object-cover"

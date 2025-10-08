@@ -1,30 +1,3 @@
-//import React from 'react'
-//import Navbaar from './components/Navbaar'
-//import Hero from './components/Hero'
-//import Products from './components/Products'
-//import Slider from './components/Slider'
-//import TrendingProduct from './components/CustomerSupport'
-//import Sale from './components/Contact'
-//import Footer from './components/Footer'
-//import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-//
-//const App = () => {
-//  return (
-//    <div className='overflow-x-hidden'>
-//      <Navbaar/>
-//      <Hero/>
-//      <Products />
-//      <Slider/>
-//      <TrendingProduct/>
-//      <Sale/>
-//      <Footer/>
-//    </div>
-//  )
-//}
-//
-//export default App
-
-
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
@@ -39,6 +12,8 @@ import Womens from './components/Womens';
 import ProductDetailsWomens from './components/ProductDetailsWomens';
 import ProductDetailsMens from './components/ProductDetailsMens';
 import MensCollection from './components/MensCollection';
+import KidsCollection from './components/KidsCollection';
+import ProductDetailsKids from './components/ProductDetailsKids';
 
 const App = () => {
   return (
@@ -66,8 +41,10 @@ const App = () => {
             {/* Womens page */}
             <Route path="/Womens" element={<Womens />} />
             <Route path='/mens' element={<MensCollection/>}/>
+            <Route path='/kids' element={<KidsCollection/>}/>
             <Route path="/product/:id" element={<ProductDetailsWomens />} />
             <Route path="/productmen/:id" element={<ProductDetailsMens/>} />
+            <Route path="/productkids/:id" element={<ProductDetailsKids/>} />
 
           </Routes>
         </div>

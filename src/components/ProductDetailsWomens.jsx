@@ -133,10 +133,14 @@ const ProductDetails = () => {
             contemporary design and breathable fabric, it's perfect for everyday
             wear or festive occasions.
           </p>
-          <div className="flex items-center gap-2 mt-10">
-            <button className="px-18 py-2 border-1 shadow-sm border-none hover:bg-black hover:text-white cursor-pointer"><i class="ri-shopping-cart-line"></i> Add to cart</button>
-            <button className="px-18 py-2 border-1 cursor-pointer border-none bg-[#FB641B] hover:bg-[#d04f0f] text-white"><i class="ri-shopping-bag-line"></i> Buy Now</button>
-          </div>
+            <div className="flex flex-col sm:flex-row sm:items-center sm:gap-4 gap-3 mt-8 w-full">
+  <button className="w-full sm:w-auto flex items-center justify-center gap-2 px-6 py-2 border border-gray-400 text-black hover:bg-black hover:text-white transition">
+    <i className="ri-shopping-cart-line"></i> Add to Cart
+  </button>
+  <button className="w-full sm:w-auto flex items-center justify-center gap-2 px-6 py-2 bg-[#FB641B] hover:bg-[#d04f0f] text-white transition">
+    <i className="ri-shopping-bag-line"></i> Buy Now
+  </button>
+</div>
         </div>
       </div>
     </div>
