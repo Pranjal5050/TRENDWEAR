@@ -1,97 +1,160 @@
-import React from 'react';
+import React from "react";
+import { Link } from "react-router-dom";
+
+// Men's products
+const mensProducts = [
+  {
+    id: 1,
+    name: "Men's T-Shirt",
+    price: 499,
+    originalPrice: 999,
+    discount: 50,
+    image:
+      "https://media.istockphoto.com/id/1212710606/photo/young-handsome-man-with-beard-wearing-casual-t-shirt-standing-over-white-background-looking.jpg?s=612x612&w=0&k=20&c=TqO46wTlF5ZA3lFpIfNq2br-ruuKpdZXSegCkHNoqMo=",
+  },
+  {
+    id: 2,
+    name: "Trendy Men's Style",
+    price: 799,
+    originalPrice: 1499,
+    discount: 46,
+    image:
+      "https://media.istockphoto.com/id/1804028024/photo/portrait-of-happy-casual-handsome-man-smiling-mid-adult-guy-isolated-on-white-background-copy.jpg?s=612x612&w=0&k=20&c=xhjQjf2iUR1yd4hs60sa798vUzX0ZdmiLFarg876Bb8=",
+  },
+  {
+    id: 3,
+    name: "Men's Sweatshirt",
+    price: 999,
+    originalPrice: 1999,
+    discount: 50,
+    image:
+      "https://media.istockphoto.com/id/1142213111/photo/front-of-long-sleeve-sweatshirt-isolated-on-white-background.jpg?s=612x612&w=0&k=20&c=8YJ--Tv22JmK8tCi7Jh64wsMAMZ2eivB4cjtQo4W__c=",
+  },
+  {
+    id: 4,
+    name: "Men's Brown Shoes",
+    price: 1299,
+    originalPrice: 2499,
+    discount: 48,
+    image:
+      "https://media.istockphoto.com/id/539817006/photo/fashion-brown-shoes.jpg?s=612x612&w=0&k=20&c=dvH9h3k5_i3Blp6xdgZBn2AoaUQ6aNIcKm2Nd5iUSkk=",
+  },
+];
+
+// Women's products (same IDs as used in ProductDetails.jsx)
+const womensProducts = [
+  {
+    id: 1,
+    name: "Women Embroidered Pure Cotton Straight Kurta (Blue)",
+    price: 499,
+    originalPrice: 999,
+    discount: 50,
+    image:
+      "https://rukminim2.flixcart.com/image/612/612/xif0q/kurta/e/e/e/l-sk-023-green-khadi-kurta-deepyog-original-imah2mv8w4uxzchs.jpeg?q=70",
+  },
+  {
+    id: 2,
+    name: "Women A-line White Maxi/Full Length Dress",
+    price: 899,
+    originalPrice: 1999,
+    discount: 55,
+    image:
+      "https://rukminim2.flixcart.com/image/612/612/xif0q/kurta/i/r/v/xl-hek606-dressar-original-imahfv42kzjtgrjs.jpeg?q=70",
+  },
+  {
+    id: 3,
+    name: "Women A-line Maroon Maxi Dress",
+    price: 899,
+    originalPrice: 1999,
+    discount: 55,
+    image:
+      "https://rukminim2.flixcart.com/image/612/612/xif0q/kurta/z/i/r/3xl-butti-maroon-kamex-original-imahfxcjsmhvcqgs.jpeg?q=70",
+  },
+  {
+    id: 4,
+    name: "Women A-line Red Dress",
+    price: 899,
+    originalPrice: 1999,
+    discount: 55,
+    image:
+      "https://rukminim2.flixcart.com/image/612/612/xif0q/kurta/p/r/v/m-b133-pratha-red-youthnic-original-imah925pvvczwdgt.jpeg?q=70",
+  },
+];
 
 const Products = () => {
-  const products = [
-    {
-      id: 1,
-      description: "Latest collection",
-      image: "https://media.istockphoto.com/id/1212710606/photo/young-handsome-man-with-beard-wearing-casual-t-shirt-standing-over-white-background-looking.jpg?s=612x612&w=0&k=20&c=TqO46wTlF5ZA3lFpIfNq2br-ruuKpdZXSegCkHNoqMo="
-    },
-    {
-      id: 2,
-      description: "Trendy styles",
-      image: "https://media.istockphoto.com/id/1804028024/photo/portrait-of-happy-casual-handsome-man-smiling-mid-adult-guy-isolated-on-white-background-copy.jpg?s=612x612&w=0&k=20&c=xhjQjf2iUR1yd4hs60sa798vUzX0ZdmiLFarg876Bb8="
-    },
-    {
-      id: 3,
-      description: "Premium beauty",
-      image: "https://media.istockphoto.com/id/1142213111/photo/front-of-long-sleeve-sweatshirt-isolated-on-white-background.jpg?s=612x612&w=0&k=20&c=8YJ--Tv22JmK8tCi7Jh64wsMAMZ2eivB4cjtQo4W__c="
-    },
-    {
-      id: 4,
-      description: "Premium beauty",
-      image: "https://media.istockphoto.com/id/539817006/photo/fashion-brown-shoes.jpg?s=612x612&w=0&k=20&c=dvH9h3k5_i3Blp6xdgZBn2AoaUQ6aNIcKm2Nd5iUSkk="
-    }
-  ];
-
-  const product = [
-    {
-      id: 1,
-      description: "Latest collection",
-      image: "https://rukminim2.flixcart.com/image/612/612/xif0q/kurta/z/d/r/xl-kurta-91012-a-jagra-original-imaheehmbxydgm4h.jpeg?q=70"
-    },
-    {
-      id: 2,
-      description: "Trendy styles",
-      image: "https://rukminim2.flixcart.com/image/612/612/xif0q/kurta/n/8/8/l-shortkr1359b-surhi-original-imaha6brduagzywg.jpeg?q=70"
-    },
-    {
-      id: 3,
-      description: "Premium beauty",
-      image: "https://rukminim2.flixcart.com/image/612/612/xif0q/slipper-flip-flop/s/j/j/5-d-516-onion-doctor-extra-soft-onion-original-imahg2k4krnjhx2n.jpeg?q=70"
-    },
-    {
-      id: 4,
-      description: "Premium beauty",
-      image: "https://rukminim2.flixcart.com/image/612/612/xif0q/dress/v/3/2/s-kt-um-350-38-get-glamr-original-imah8g9v2yknfgdx.jpeg?q=70"
-    }
-  ];
-
   return (
-    <div className="w-full bg-[#FAFAFA] py-5 px-5 md:px-10">
-      {/* Men's Section */}
-      <h1 id="men" className="text-4xl font mt-5 text-center">Men's</h1>
-      <hr className="text-red-300 w-28 mt-2 m-auto mb-10" />
+    <div className="w-full bg-[#FAFAFA] py-6 px-4 md:px-10">
 
-      <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-5">
-        {products.map((item) => (
-          <div key={item.id} className="rounded-lg overflow-hidden bg-white">
-            <img className="w-full h-48 object-cover" src={item.image} alt={item.description} />
-            <div className="p-3 text-center">
-              <p className="text-gray-700 mt-1">{item.description}</p>
-              <div className="text-[#E3C01C]">
-                <i className="ri-star-s-fill"></i>
-                <i className="ri-star-s-fill"></i>
-                <i className="ri-star-s-fill"></i>
-                <i className="ri-star-s-fill"></i>
-                <i className="ri-star-half-s-fill"></i>
+      {/* Men's Section */}
+      <h1 id="men" className="text-3xl sm:text-4xl font-bold mt-5 text-center">
+        Men's
+      </h1>
+      <hr className="border-red-300 w-28 mt-2 mb-8 mx-auto" />
+
+      <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6">
+        {mensProducts.map((item) => (
+          <Link to={`/product/${item.id}`} key={item.id}>
+            <div className="bg-white rounded-lg overflow-hidden shadow hover:shadow-md transition duration-300">
+              <img
+                className="w-full h-48 sm:h-60 md:h-72 object-cover"
+                src={item.image}
+                alt={item.name}
+              />
+              <div className="p-3">
+                <h1 className="text-[#878787] font-bold text-xs">PHYSIL</h1>
+                <h2 className="text-sm font-semibold text-gray-800 mt-1 line-clamp-2">
+                  {item.name}
+                </h2>
+                <p className="text-sm font-bold mt-1">
+                  ₹{item.price}
+                  <span className="line-through text-gray-500 font-normal text-xs ml-1">
+                    ₹{item.originalPrice}
+                  </span>
+                  <span className="text-green-600 font-semibold text-xs ml-1">
+                    {item.discount}% off
+                  </span>
+                </p>
               </div>
-              <h1 className="mt-1 font-semibold">₹299</h1>
             </div>
-          </div>
+          </Link>
         ))}
       </div>
 
       {/* Women's Section */}
-      <h1 id="women" className="text-4xl text-center mt-10">Women's</h1>
-      <hr className="text-red-300 w-40 mt-2 mb-10 m-auto" />
+      <h1
+        id="women"
+        className="text-3xl sm:text-4xl font-bold text-center mt-12"
+      >
+        Women's
+      </h1>
+      <hr className="border-red-300 w-40 mt-2 mb-8 mx-auto" />
 
-      <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-5">
-        {product.map((item) => (
-          <div key={item.id} className="rounded-lg overflow-hidden bg-white">
-            <img className="w-full h-48 object-cover" src={item.image} alt={item.description} />
-            <div className="p-3 text-center">
-              <p className="text-gray-700 mt-1">{item.description}</p>
-              <div className="text-[#E3C01C]">
-                <i className="ri-star-s-fill"></i>
-                <i className="ri-star-s-fill"></i>
-                <i className="ri-star-s-fill"></i>
-                <i className="ri-star-s-fill"></i>
-                <i className="ri-star-half-s-fill"></i>
+      <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6">
+        {womensProducts.map((item) => (
+          <Link to={`/product/${item.id}`} key={item.id}>
+            <div className="bg-white rounded-lg overflow-hidden shadow hover:shadow-md transition duration-300">
+              <img
+                className="w-full h-48 sm:h-60 md:h-72 object-cover"
+                src={item.image}
+                alt={item.name}
+              />
+              <div className="p-3">
+                <h1 className="text-[#878787] font-bold text-xs">PHYSIL</h1>
+                <h2 className="text-sm font-semibold text-gray-800 mt-1 line-clamp-2">
+                  {item.name}
+                </h2>
+                <p className="text-sm font-bold mt-1">
+                  ₹{item.price}
+                  <span className="line-through text-gray-500 font-normal text-xs ml-1">
+                    ₹{item.originalPrice}
+                  </span>
+                  <span className="text-green-600 font-semibold text-xs ml-1">
+                    {item.discount}% off
+                  </span>
+                </p>
               </div>
-              <h1 className="mt-1 font-semibold">₹299</h1>
             </div>
-          </div>
+          </Link>
         ))}
       </div>
     </div>

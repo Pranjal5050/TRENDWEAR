@@ -36,7 +36,9 @@ import TrendingProduct from './components/CustomerSupport';
 import Sale from './components/Contact';
 import Footer from './components/Footer';
 import Womens from './components/Womens';
-import ProductDetails from './components/ProductDetails';
+import ProductDetailsWomens from './components/ProductDetailsWomens';
+import ProductDetailsMens from './components/ProductDetailsMens';
+import MensCollection from './components/MensCollection';
 
 const App = () => {
   return (
@@ -63,7 +65,10 @@ const App = () => {
 
             {/* Womens page */}
             <Route path="/Womens" element={<Womens />} />
-            <Route path="/product/:id" element={<ProductDetails />} />
+            <Route path='/mens' element={<MensCollection/>}/>
+            <Route path="/product/:id" element={<ProductDetailsWomens />} />
+            <Route path="/productmen/:id" element={<ProductDetailsMens/>} />
+
           </Routes>
         </div>
 

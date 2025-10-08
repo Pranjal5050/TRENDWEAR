@@ -37,7 +37,7 @@ const Hero = () => {
             Men's Fashion
           </h1>
           <p className="text-gray-400 mt-1 mb-2 text-sm md:text-base">358 items</p>
-          <button className="font-medium text-start">Shop Now</button>
+          <Link to={'/mens'} className="font-medium text-start">Shop Now</Link>
           <hr className="w-16 border-[#CA1515] mt-1" />
         </div>
       </div>
