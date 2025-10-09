@@ -20,8 +20,8 @@ const products = [
   {
     id: 2,
     name: "Women A-line White Maxi/Full Length Dress",
-    price: 899,
-    originalPrice: 1999,
+    price: 699,
+    originalPrice: 1599,
     discount: 55,
     images: [
       "https://rukminim2.flixcart.com/image/612/612/xif0q/kurta/i/r/v/xl-hek606-dressar-original-imahfv42kzjtgrjs.jpeg?q=70",
@@ -33,9 +33,10 @@ const products = [
   {
     id: 3,
     name: "Women A-line White Maxi/Full Length Dress",
-    price: 899,
+    price: 799,
     originalPrice: 1999,
     discount: 55,
+    offer: "Top Discount of the Sale",
     images: [
       "https://rukminim2.flixcart.com/image/612/612/xif0q/kurta/z/i/r/3xl-butti-maroon-kamex-original-imahfxcjsmhvcqgs.jpeg?q=70",
       "https://rukminim2.flixcart.com/image/612/612/xif0q/shopsy-kurta/u/3/w/l-butti-maroon-kamex-original-imahcst8spszjhny.jpeg?q=70",
@@ -46,14 +47,69 @@ const products = [
   {
     id: 4,
     name: "Women A-line White Maxi/Full Length Dress",
-    price: 899,
-    originalPrice: 1999,
+    price: 199,
+    originalPrice: 5999,
     discount: 55,
+    offer: "Top Discount of the Sale",
     images: [
       "https://rukminim2.flixcart.com/image/612/612/xif0q/kurta/p/r/v/m-b133-pratha-red-youthnic-original-imah925pvvczwdgt.jpeg?q=70",
       "https://rukminim2.flixcart.com/image/612/612/xif0q/kurta/g/t/l/m-b133-pratha-red-youthnic-original-imah925pnwxzszun.jpeg?q=70",
       "https://rukminim2.flixcart.com/image/612/612/xif0q/kurta/n/x/t/m-b133-pratha-red-youthnic-original-imah925pgzethtqx.jpeg?q=70", // fake
       "https://rukminim2.flixcart.com/image/612/612/xif0q/kurta/4/m/j/m-b133-pratha-red-youthnic-original-imah925pzyqcwkur.jpeg?q=70", // fake
+    ],
+  },
+  {
+    id: 5,
+    name: "Women A-line White Maxi/Full Length Dress",
+    price: 149,
+    originalPrice: 549,
+    discount: 55,
+    images: [
+      "https://rukminim2.flixcart.com/image/612/612/xif0q/ethnic-set/s/k/n/s-pink-dupatta-set-ryn-divastri-original-imah8t35rycgrzpb.jpeg?q=70",
+      "https://rukminim2.flixcart.com/image/612/612/xif0q/ethnic-set/7/e/6/s-pink-dupatta-set-ryn-divastri-original-imah8t35vzcetvnn.jpeg?q=70",
+      "https://rukminim2.flixcart.com/image/612/612/xif0q/ethnic-set/r/x/x/s-pink-dupatta-set-ryn-divastri-original-imah8t35qzmkwqpa.jpeg?q=70", // fake
+      "https://rukminim2.flixcart.com/image/612/612/xif0q/ethnic-set/h/u/r/s-pink-dupatta-set-ryn-divastri-original-imah8t353ubtvnsm.jpeg?q=70", // fake
+    ],
+  },
+  {
+    id: 6,
+    name: "Women A-line White Maxi/Full Length Dress",
+    price: 349,
+    originalPrice: 699,
+    discount: 55,
+    offer: "Top Discount of the Sale",
+    images: [
+      "https://rukminim2.flixcart.com/image/612/612/xif0q/sari/o/1/b/free-2-star-sheldrom-mart-unstitched-original-imahc6ad5vwfja6j.jpeg?q=70",
+      "https://rukminim2.flixcart.com/image/612/612/xif0q/sari/h/f/e/free-2-star-sheldrom-mart-unstitched-original-imahc6adpbynjfns.jpeg?q=70",
+      "https://rukminim2.flixcart.com/image/612/612/xif0q/sari/h/x/2/free-2-star-sheldrom-mart-unstitched-original-imahc6adv8vz9yjt.jpeg?q=70", // fake
+      "https://rukminim2.flixcart.com/image/612/612/xif0q/sari/u/l/4/free-2-star-sheldrom-mart-unstitched-original-imahc6adqjyrfubn.jpeg?q=70", // fake
+    ],
+  },
+  {
+    id: 7,
+    name: "Women A-line White Maxi/Full Length Dress",
+    price: 99,
+    originalPrice: 299,
+    discount: 55,
+    images: [
+      "https://rukminim2.flixcart.com/image/612/612/xif0q/salwar-kurta-dupatta/c/q/j/xxl-bg-29-tabahi-original-imah5nw3zhagfsbk.jpeg?q=70",
+      "https://rukminim2.flixcart.com/image/612/612/xif0q/salwar-kurta-dupatta/y/z/2/xxl-bg-29-tabahi-original-imah5nw3ja8m2fdq.jpeg?q=70",
+      "https://rukminim2.flixcart.com/image/612/612/xif0q/salwar-kurta-dupatta/q/f/q/xxl-bg-29-tabahi-original-imah5nw3vsyzbzex.jpeg?q=70", // fake
+      "https://rukminim2.flixcart.com/image/612/612/xif0q/salwar-kurta-dupatta/j/u/z/xxl-bg-29-tabahi-original-imah5nw3euba2wz3.jpeg?q=70", // fake
+    ],
+  },
+  {
+    id: 8,
+    name: "Women A-line White Maxi/Full Length Dress",
+    price: 149,
+    originalPrice: 499,
+    discount: 55,
+    offer: "Top Discount of the Sale",
+    images: [
+      "https://rukminim2.flixcart.com/image/612/612/xif0q/ethnic-set/n/2/w/s-women-sharara-dupatta-set-black-jayleen-original-imahfjq2rvhmafzw.jpeg?q=70",
+      "https://rukminim2.flixcart.com/image/612/612/xif0q/ethnic-set/q/c/2/s-women-sharara-dupatta-set-black-jayleen-original-imahfjq2zeguwjqb.jpeg?q=70",
+      "https://rukminim2.flixcart.com/image/612/612/xif0q/ethnic-set/b/c/y/s-women-sharara-dupatta-set-black-jayleen-original-imahfjq2nftjp7fm.jpeg?q=70", // fake
+      "https://rukminim2.flixcart.com/image/612/612/xif0q/ethnic-set/0/c/d/s-women-sharara-dupatta-set-black-jayleen-original-imahfjq2rav9h9bg.jpeg?q=70", // fake
     ],
   },
   // Add more products similarly...
