@@ -14,8 +14,8 @@ const products = [
     images: [
       "https://rukminim2.flixcart.com/image/612/612/xif0q/shopsy-bike-mobile-holder/p/r/u/universal-bike-mount-holder-verson-2-0-metal-body-360-degree-original-imah4spnfr9nhgjw.jpeg?q=70",
       "https://rukminim2.flixcart.com/image/612/612/xif0q/bike-mobile-holder/a/u/p/universal-bike-mount-holder-verson-2-0-metal-body-360-degree-original-imahcfyxukkhqh7g.jpeg?q=70",
-      "https://rukminim2.flixcart.com/image/612/612/xif0q/bike-mobile-holder/d/t/k/universal-bike-mount-holder-verson-2-0-metal-body-360-degree-original-imahcfyxezkgmyvx.jpeg?q=70", // fake 3rd angle
-      "https://rukminim2.flixcart.com/image/612/612/xif0q/bike-mobile-holder/h/z/5/universal-bike-mount-holder-verson-2-0-metal-body-360-degree-original-imahcfyxsjmh3z3p.jpeg?q=70", // fake 4th angle
+      "https://rukminim2.flixcart.com/image/612/612/xif0q/bike-mobile-holder/d/t/k/universal-bike-mount-holder-verson-2-0-metal-body-360-degree-original-imahcfyxezkgmyvx.jpeg?q=70",
+      "https://rukminim2.flixcart.com/image/612/612/xif0q/bike-mobile-holder/h/z/5/universal-bike-mount-holder-verson-2-0-metal-body-360-degree-original-imahcfyxsjmh3z3p.jpeg?q=70",
     ],
   },
   {
@@ -27,8 +27,8 @@ const products = [
     images: [
       "https://rukminim2.flixcart.com/image/612/612/xif0q/vehicle-washing-cloth/k/p/y/1-car101cdpo1-car101-original-imahgfuabwemdj6k.jpeg?q=70",
       "https://rukminim2.flixcart.com/image/612/612/xif0q/vehicle-washing-cloth/h/x/a/1-car101cdpo1-car101-original-imahgfua9gqzubf3.jpeg?q=70",
-      "https://rukminim2.flixcart.com/image/612/612/xif0q/vehicle-washing-cloth/a/l/h/1-car101cdpo1-car101-original-imahgfuaejnrhztm.jpeg?q=70", // fake
-      "https://rukminim2.flixcart.com/image/612/612/xif0q/vehicle-washing-cloth/4/r/x/1-car101cdpo1-car101-original-imahgfua565mzxfn.jpeg?q=70", // fake
+      "https://rukminim2.flixcart.com/image/612/612/xif0q/vehicle-washing-cloth/a/l/h/1-car101cdpo1-car101-original-imahgfuaejnrhztm.jpeg?q=70",
+      "https://rukminim2.flixcart.com/image/612/612/xif0q/vehicle-washing-cloth/4/r/x/1-car101cdpo1-car101-original-imahgfua565mzxfn.jpeg?q=70",
     ],
   },
   {
@@ -143,12 +143,20 @@ const ProductDetails = () => {
         <div>
           <h1 className="text-2xl font-bold">{product.name}</h1>
           <p className="text-xl mt-2">₹{product.price}</p>
-          <button
-            className="mt-4 px-6 py-2 bg-gray-800 text-white"
+                    <div className="flex gap-5 mt-2">
+            <button
+            className="mt-4 px-6 py-2 bg-gray-800 text-white cursor-pointer"
             onClick={() => addToCart(product)}
           >
             Add to Cart
           </button>
+          <button
+            className="mt-4 px-6 py-2 border-1 cursor-pointer"
+          >
+            Buy Now
+          </button>
+          </div>
+          <p className="text-gray-400 mt-8">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Distinctio, tenetur iste adipisci aspernatur corporis quidem dolorum tempora eum eius voluptate.</p>
         </div>
       </div>
     </div>

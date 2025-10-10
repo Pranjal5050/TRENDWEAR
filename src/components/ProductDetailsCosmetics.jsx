@@ -142,12 +142,20 @@ const ProductDetails = () => {
         <div>
           <h1 className="text-2xl font-bold">{product.name}</h1>
           <p className="text-xl mt-2">₹{product.price}</p>
-          <button
-            className="mt-4 px-6 py-2 bg-gray-800 text-white"
+                    <div className="flex gap-5 mt-2">
+            <button
+            className="mt-4 px-6 py-2 bg-gray-800 text-white cursor-pointer"
             onClick={() => addToCart(product)}
           >
             Add to Cart
           </button>
+          <button
+            className="mt-4 px-6 py-2 border-1 cursor-pointer"
+          >
+            Buy Now
+          </button>
+          </div>
+          <p className="text-gray-400 mt-8">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Distinctio, tenetur iste adipisci aspernatur corporis quidem dolorum tempora eum eius voluptate.</p>
         </div>
       </div>
     </div>
