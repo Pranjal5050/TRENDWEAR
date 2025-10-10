@@ -71,7 +71,7 @@ const Hero = () => {
             Cosmetics
           </h1>
           <p className="text-gray-400 mt-1 mb-2 text-sm md:text-base">159 items</p>
-          <button className="font-medium text-start">Shop Now</button>
+          <Link to={'/cosmetics'} className="font-medium text-start">Shop Now</Link>
           <hr className="w-16 border-[#CA1515] mt-1" />
         </div>
       </div>
@@ -88,7 +88,7 @@ const Hero = () => {
             Accessories
           </h1>
           <p className="text-gray-400 mt-1 mb-2 text-sm md:text-base">792 items</p>
-          <button className="font-medium text-start">Shop Now</button>
+          <Link to={'/accessories'} className="font-medium text-start">Shop Now</Link>
           <hr className="w-16 border-[#CA1515] mt-1" />
         </div>
       </div>

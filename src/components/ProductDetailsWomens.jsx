@@ -1,9 +1,10 @@
 import React, { useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
+import { useCart } from "../context/CartContext";
 
-// Sample product data with multiple angles
+// Example products
 const products = [
-  {
+{
     id: 1,
     name: "Women Embroidered Pure Cotton Straight Kurta (Blue)",
     price: 499,
@@ -112,91 +113,52 @@ const products = [
       "https://rukminim2.flixcart.com/image/612/612/xif0q/ethnic-set/0/c/d/s-women-sharara-dupatta-set-black-jayleen-original-imahfjq2rav9h9bg.jpeg?q=70", // fake
     ],
   },
-  // Add more products similarly...
 ];
 
 const ProductDetails = () => {
   const { id } = useParams();
   const navigate = useNavigate();
+  const { addToCart } = useCart();
 
   const product = products.find((p) => p.id === parseInt(id));
-  const [previewImage, setPreviewImage] = useState(product?.images?.[0]);
+  const [preview, setPreview] = useState(product?.images[0]);
 
-  if (!product) {
-    return (
-      <div className="text-center text-red-500 mt-20">
-        Product Not Found
-      </div>
-    );
-  }
+  if (!product) return <div className="text-center mt-20">Product not found</div>;
 
   return (
-    <div className="max-w-5xl mx-auto py-10 px-4">
-      <button
-        onClick={() => navigate(-1)}
-        className="mb-4 text-lg"
-      >
-        <i class="ri-arrow-left-s-line"></i><span className="text-sm">Back</span>
-      </button>
-
-      <div className="grid grid-cols-1 md:grid-cols-2">
-        {/* Image section */}
+    <div className="max-w-4xl mx-auto py-10 px-4">
+      <button onClick={() => navigate(-1)} className="mb-4">Back</button>
+      <div className="grid md:grid-cols-2 gap-6">
         <div>
-          <img
-            src={previewImage}
-            alt={product.name}
-            className="w-92 h-[120vw] object-cover md:h-[40vw] rounded-sm"
-          />
-
-          {/* Thumbnails */}
-          <div className="flex gap-2 mt-4">
-            {product.images.map((img, index) => (
+          <img src={preview} alt={product.name} className="w-full h-96 object-cover" />
+          <div className="flex gap-2 mt-2">
+            {product.images.map((img, i) => (
               <img
-                key={index}
+                key={i}
                 src={img}
-                alt={`Thumbnail ${index + 1}`}
-                onMouseEnter={() => setPreviewImage(img)}
-                className={`w-16 h-20 object-cover border rounded cursor-pointer ${
-                  previewImage === img ? "border-indigo-500" : "border-gray-300"
-                }`}
+                className="w-16 h-20 object-cover border cursor-pointer"
+                onMouseEnter={() => setPreview(img)}
               />
             ))}
           </div>
         </div>
-
-        {/* Product details */}
         <div>
-          <h1 className="text-[13px] mt-5 md:text-2xl font-bold text-gray-800 mb-2">
-            {product.name}
-          </h1>
-
-          <p className="text-lg font-semibold mt-2">
-            ₹{product.price}{" "}
-            <span className="line-through text-gray-500 text-base">
-              ₹{product.originalPrice}
-            </span>{" "}
-            <span className="text-green-600 text-base font-semibold">
-              {product.discount}% off
-            </span>
-          </p>
-
-          {product.offer && (
-            <p className="mt-2 text-indigo-600 font-medium">{product.offer}</p>
-          )}
-
-          <p className="mt-6 text-gray-600">
-            This product is crafted with precision and style. Featuring a
-            contemporary design and breathable fabric, it's perfect for everyday
-            wear or festive occasions.
-          </p>
-            <div className="flex flex-col sm:flex-row sm:items-center sm:gap-4 gap-3 mt-8 w-full">
-  <button className="w-full sm:w-auto flex items-center justify-center gap-2 px-6 py-2 border border-gray-400 text-black hover:bg-black hover:text-white transition">
-    <i className="ri-shopping-cart-line"></i> Add to Cart
-  </button>
-  <button className="w-full sm:w-auto flex items-center justify-center gap-2 px-6 py-2 bg-[#FB641B] hover:bg-[#d04f0f] text-white transition">
-    <i className="ri-shopping-bag-line"></i> Buy Now
-  </button>
-</div>
+          <h1 className="text-2xl font-bold">{product.name}</h1>
+          <p className="text-xl mt-2">₹{product.price}</p>
+          <div className="flex gap-5 mt-2">
+            <button
+            className="mt-4 px-6 py-2 bg-gray-800 text-white cursor-pointer"
+            onClick={() => addToCart(product)}
+          >
+            Add to Cart
+          </button>
+          <button
+            className="mt-4 px-6 py-2 border-1 cursor-pointer"
+          >
+            Buy Now
+          </button>
+          </div>
+          <p className="text-gray-400 mt-8">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Distinctio, tenetur iste adipisci aspernatur corporis quidem dolorum tempora eum eius voluptate.</p>
         </div>
       </div>
     </div>

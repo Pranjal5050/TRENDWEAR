@@ -2,6 +2,7 @@ import React from 'react'
 import 'remixicon/fonts/remixicon.css'
 import { useState } from "react";
 import { RiShoppingCartLine, RiMenu3Line, RiCloseLine } from "react-icons/ri";
+import { Link } from 'react-router-dom';
 
 export default function Navbaar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -23,7 +24,7 @@ export default function Navbaar() {
 
         {/* Cart + Mobile Toggle */}
         <div className="flex items-center gap-4">
-          <RiShoppingCartLine className="text-[22px]" />
+          <Link to={"/cart"}><RiShoppingCartLine className="text-[22px]" /></Link>
           <button
             className="md:hidden text-2xl"
             onClick={() => setIsOpen(!isOpen)}
